@@ -19,6 +19,7 @@
   "homepage": "https://github.com/PedroMakengo/nvw-1#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.3",
+    "sqlite3": "^5.0.2"
   }
 }
