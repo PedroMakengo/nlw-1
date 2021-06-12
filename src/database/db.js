@@ -64,7 +64,7 @@ module.exports = db
 //     // })
 
 //     // Deletar dados na tabela
-    // db.run(`DELETE FROM places WHERE id = ?`, [3], function(err) {
+    // db.run(`DELETE FROM places WHERE id = ?`, [8], function(err) {
     //     if(err) {
     //         return console.log(err)
     //     }

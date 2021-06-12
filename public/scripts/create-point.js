@@ -44,16 +44,19 @@ document
 
 
 // Itens de coleta
-// pegar todos os lis
+// pegar todos os li
 
 const itemsToCollect = document.querySelectorAll(".items-grid li")
 
+// Percorrer todos os li
 for(const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)
 }
 
+// Pegar o input items que armazem todos os items 
 const collectedItems = document.querySelector("input[name=items]")
 
+// Criando o array para o armazenamento das minhas li
 let selectedItems = [];
 
 function handleSelectedItem(event) {
@@ -64,6 +67,7 @@ function handleSelectedItem(event) {
     
     const itemId = itemLi.dataset.id
 
+    console.log("itemID: " + itemId)
 
     // verificar se existem itens selecionados, se sim 
     // pegar os itens selecionados 
@@ -84,7 +88,7 @@ function handleSelectedItem(event) {
     }else {
         selectedItems.push(itemId)
     }
-    console.log(selectedItems)
+    console.log('selectedItems: ' , selectedItems)
     // se não estiver selecionado, adicionar à seleção 
 
 
