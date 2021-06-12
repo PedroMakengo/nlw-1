@@ -81,15 +81,16 @@ server.post("/savepoint", (req, res) => {
 
 server.get("/search", (req, res) => {
 
-    let search = req.body.search
-    console.log(search)
+    const search = req.query.search
 
-    if(search == ''){
+    if(search == ""){
         // Pesquisa vazia 
         return res.render("search-result.html", {total: 0})
     }
 
-    db.all(`SELECT * FROM places WHERE city = '${search}' `, function(err, rows){
+    console.log(search)
+
+    db.all(`SELECT * FROM places WHERE state LIKE '%${search}%' `, function(err, rows){
         if(err) {
             return console.log(err)
         }
